@@ -12,8 +12,8 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: bas/tmux.conf
-    ~/.gitconfig: base/gitconfig
+    ~/.tmux.conf: base/.tmux.conf
+    ~/.gitconfig: base/.gitconfig
 
 # - create:
 #     - ~/downloads
