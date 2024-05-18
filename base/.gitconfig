@@ -31,3 +31,6 @@
   cmd = vim -f -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [merge]
   tool = vimdiff3
+[pager]
+	branch = false
+	diff = false
