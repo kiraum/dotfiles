@@ -15,6 +15,7 @@
     ~/.tmux.conf: base/.tmux.conf
     ~/.gitconfig: base/.gitconfig
     ~/.vimrc: base/.vimrc
+    ~/.zshrc: base/.zshrc
 
 # - create:
 #     - ~/downloads

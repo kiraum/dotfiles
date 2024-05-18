@@ -34,3 +34,4 @@
 [pager]
 	branch = false
 	diff = false
+	log = false
