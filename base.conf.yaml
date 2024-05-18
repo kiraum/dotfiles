@@ -14,6 +14,7 @@
 - link:
     ~/.tmux.conf: base/.tmux.conf
     ~/.gitconfig: base/.gitconfig
+    ~/.vimrc: base/.vimrc
 
 # - create:
 #     - ~/downloads

@@ -1,5 +1,33 @@
 [user]
-	email = tfgoncalves@xpto.eng.br
-	name = kiraum
+  email = tfgoncalves@xpto.eng.br
+  name = kiraum
 [pack]
 	windowMemory = 64m
+[diff]
+  renames = true
+[push]
+  default = tracking
+[format]
+  pretty = oneline
+[core]
+  editor = vim
+[color]
+  ui = auto
+[rerere]
+  enable = true
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  b = branch
+  changed = diff --name-status -r
+  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  lg = log --graph --decorate --all --abbrev-commit --date=relative --pretty=format:'%h -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
+  su = submodule update --init
+
+[branch]
+  autosetupmerge = true
+[mergetool "vimdiff3"]
+  cmd = vim -f -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
+[merge]
+  tool = vimdiff3
