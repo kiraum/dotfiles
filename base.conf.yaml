@@ -1,29 +1,32 @@
 ---
 - defaults:
-    link:
-        create: true
-        relink: true
-        relative: true
-    shell:
-        stdin: true
-        stdout: true
-        stderr: true
+  link:
+    create: true
+    relink: true
+    relative: true
+  shell:
+    stdin: true
+    stdout: true
+    stderr: true
 
 - clean: ['~']
 
 - create:
   - ~/.config/nvim
+  - ~/.vim/autoload
+  - ~/.vim/bundle 
 
 - link:
-    ~/.tmux.conf: base/.tmux.conf
-    ~/.gitconfig: base/.gitconfig
-    ~/.vimrc: base/.vimrc
-    ~/.zshrc: base/.zshrc
-    ~/.config/nvim/init.vim: base/init.vim
+  ~/.tmux.conf: base/.tmux.conf
+  ~/.gitconfig: base/.gitconfig
+  ~/.vimrc: base/.vimrc
+  ~/.zshrc: base/.zshrc
+  ~/.config/nvim/init.vim: base/init.vim
 
 - shell:
-  - [command -v brew >/dev/null 2>&1 || "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"]
-  - [ test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"]
+  - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
+  - [test -d ~/.oh-my-zsh || /bin/sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"]
+  - [command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"]
   - [zstyle ':omz:update' mode auto]
   - [zstyle ':omz:update' frequency 1]
   - [zstyle ':omz:update' verbose silent]
@@ -31,3 +34,4 @@
   - [brew update]
   - [brew upgrade]
   - [brew install bgpdump bgpq4 clang-format docker-compose git jq mtr neovim python@3.12 rust shellcheck shfmt socat tcpdump telnet tmux vim wget]
+  - [chsh -s /bin/zsh]
