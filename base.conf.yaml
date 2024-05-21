@@ -16,6 +16,7 @@
     ~/.gitconfig: base/.gitconfig
     ~/.vimrc: base/.vimrc
     ~/.zshrc: base/.zshrc
+    ~/.config/nvim/init.vim: base/init.vim
 
 # - create:
 #     - ~/downloads
