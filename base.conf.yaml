@@ -11,6 +11,9 @@
 
 - clean: ['~']
 
+- create:
+  - ~/.config/nvim
+
 - link:
     ~/.tmux.conf: base/.tmux.conf
     ~/.gitconfig: base/.gitconfig
@@ -18,9 +21,8 @@
     ~/.zshrc: base/.zshrc
     ~/.config/nvim/init.vim: base/init.vim
 
-# - create:
-#     - ~/downloads
-#     - ~/.vim/undo-history
-
-# - shell:
-#   - [git submodule update --init --recursive, Installing submodules]
+- shell:
+  - [command -v brew >/dev/null 2>&1 || "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"]
+  - [brew update]
+  - [brew upgrade]
+  - [brew install bgpdump bgpq4 clang-format docker-compose git jq mtr neovim python@3.12 rust shellcheck shfmt socat tcpdump telnet tmux vim wget]
