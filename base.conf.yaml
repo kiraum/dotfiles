@@ -23,6 +23,11 @@
 
 - shell:
   - [command -v brew >/dev/null 2>&1 || "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"]
+  - [ test -d ~/.oh-my-zsh || sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"]
+  - [zstyle ':omz:update' mode auto]
+  - [zstyle ':omz:update' frequency 1]
+  - [zstyle ':omz:update' verbose silent]
+  - [zsh -c 'source ~/.zshrc; omz update']
   - [brew update]
   - [brew upgrade]
   - [brew install bgpdump bgpq4 clang-format docker-compose git jq mtr neovim python@3.12 rust shellcheck shfmt socat tcpdump telnet tmux vim wget]
