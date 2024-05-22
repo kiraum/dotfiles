@@ -15,7 +15,6 @@
   - ~/.config/nvim
   - ~/.vim/autoload
   - ~/.vim/bundle
-  - ~/.editrc
 
 - link:
   ~/.tmux.conf: base/.tmux.conf
