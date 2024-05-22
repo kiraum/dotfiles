@@ -14,7 +14,8 @@
 - create:
   - ~/.config/nvim
   - ~/.vim/autoload
-  - ~/.vim/bundle 
+  - ~/.vim/bundle
+  - ~/.editrc
 
 - link:
   ~/.tmux.conf: base/.tmux.conf
@@ -22,6 +23,7 @@
   ~/.vimrc: base/.vimrc
   ~/.zshrc: base/.zshrc
   ~/.config/nvim/init.vim: base/init.vim
+  ~/.editrc: base/.editrc
 
 - shell:
   - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
