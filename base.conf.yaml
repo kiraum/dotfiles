@@ -1,28 +1,27 @@
----
 - defaults:
-  link:
-    create: true
-    relink: true
-    relative: true
-  shell:
-    stdin: true
-    stdout: true
-    stderr: true
+    link:
+      create: true
+      relink: true
+      relative: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
 - create:
-  - ~/.config/nvim
-  - ~/.vim/autoload
-  - ~/.vim/bundle
+    - ~/.config/nvim
+    - ~/.vim/autoload
+    - ~/.vim/bundle
 
 - link:
-  ~/.tmux.conf: base/.tmux.conf
-  ~/.gitconfig: base/.gitconfig
-  ~/.vimrc: base/.vimrc
-  ~/.zshrc: base/.zshrc
-  ~/.config/nvim/init.vim: base/init.vim
-  ~/.editrc: base/.editrc
+    ~/.tmux.conf: base/.tmux.conf
+    ~/.gitconfig: base/.gitconfig
+    ~/.vimrc: base/.vimrc
+    ~/.zshrc: base/.zshrc
+    ~/.config/nvim/init.vim: base/init.vim
+    ~/.editrc: base/.editrc
 
 - shell:
   - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
