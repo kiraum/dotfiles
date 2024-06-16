@@ -3,6 +3,7 @@
       create: true
       relink: true
       relative: true
+      force: true
     shell:
       stdin: true
       stdout: true
@@ -33,5 +34,5 @@
   - [zsh -c 'source ~/.zshrc; omz update']
   - [brew update]
   - [brew upgrade]
-  - [brew install bgpdump bgpq4 clang-format docker-compose git jq mtr neovim python@3.12 rust shellcheck shfmt socat tcpdump telnet tmux vim wget]
+  - [brew install bgpdump bgpq4 clang-format docker-compose git jq mtr neovim pre-commit python@3.12 rust shellcheck shfmt socat tcpdump telnet tmux vim wget]
   - [chsh -s /bin/zsh]
