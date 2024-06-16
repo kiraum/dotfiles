@@ -23,6 +23,7 @@
     ~/.zshrc: base/.zshrc
     ~/.config/nvim/init.vim: base/init.vim
     ~/.editrc: base/.editrc
+    ~/init_work.sh: base/init_work.sh
 
 - shell:
   - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
