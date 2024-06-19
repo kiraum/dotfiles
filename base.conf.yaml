@@ -32,7 +32,7 @@
   - [zstyle ':omz:update' mode auto]
   - [zstyle ':omz:update' frequency 1]
   - [zstyle ':omz:update' verbose silent]
-  - [zsh -c 'source ~/.zshrc; DISABLE_UPDATE_PROMPT=true omz update']
+  - [zsh -ic 'source ~/.zshrc; DISABLE_UPDATE_PROMPT=true omz update']
   - [brew update]
   - [brew upgrade]
   - [brew install bgpdump bgpq4 clang-format docker-compose git go jq mtr neovim pre-commit python@3.12 rust shellcheck shfmt socat tcpdump telnet tmux vim wget]
