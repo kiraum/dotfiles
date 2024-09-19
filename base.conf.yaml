@@ -36,4 +36,4 @@
   - [brew update]
   - [brew upgrade]
   - [brew install bgpdump bgpkit/tap/monocle bgpq4 clang-format docker-compose git go jq mtr neovim pre-commit python@3.12 redis rust shellcheck shfmt socat tcpdump telnet terraform tmux vim wget pre-commit terraform okta-aws-cli vault kubectl sipcalc ipcalc rustup rustfmt rust-analyzer kiraum/tap/cody]
-  - [[ "$SHELL" != "/bin/zsh" ] && chsh -s /bin/zsh]
+  - [echo $SHELL | grep -q "/bin/zsh" || chsh -s /bin/zsh]
