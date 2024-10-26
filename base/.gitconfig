@@ -1,6 +1,7 @@
 [user]
   email = tfgoncalves@xpto.it
   name = kiraum
+  signingkey = EB8CAC0178B77203
 [pack]
 	windowMemory = 64m
 [diff]
@@ -35,4 +36,6 @@
 [pager]
 	branch = false
 	diff = false
-	log = false
+  log = false
+[commit]
+  gpgsign = true
