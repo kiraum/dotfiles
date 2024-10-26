@@ -102,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 DISABLE_LS_COLORS=true
+
+export GPG_TTY=$(tty)
+
