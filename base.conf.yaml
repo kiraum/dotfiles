@@ -35,5 +35,5 @@
   - [zsh -ic 'source ~/.zshrc; DISABLE_UPDATE_PROMPT=true omz update && exit']
   - [brew update]
   - [brew upgrade]
-  - [brew install bgpdump bgpkit/tap/monocle bgpq4 clang-format docker-compose git go jq mtr neovim pre-commit python@3.13 redis rust shellcheck shfmt socat tcpdump telnet terraform tmux vim wget pre-commit terraform okta-aws-cli vault kubectl sipcalc ipcalc rustup rustfmt rust-analyzer kiraum/tap/cody kiraum/tap/askjira tflint gpg awscli aws/tap/lightsailctl]
+  - [brew install bgpdump bgpkit/tap/monocle bgpq4 clang-format docker-compose git go jq mtr neovim pre-commit python@3.13 redis rust shellcheck shfmt socat tcpdump telnet terraform tmux vim wget pre-commit terraform okta-aws-cli vault kubectl sipcalc ipcalc rustup rustfmt rust-analyzer kiraum/tap/cody kiraum/tap/askjira tflint gpg awscli aws/tap/lightsailctl djlint]
   - [echo $SHELL | grep -q "/bin/zsh" || chsh -s /bin/zsh]
