@@ -24,6 +24,7 @@
     ~/.config/nvim/init.vim: base/init.vim
     ~/.editrc: base/.editrc
     ~/init_work.sh: base/init_work.sh
+    ~/.gnupg/gpg-agent.conf: base/gpg-agent.conf
 
 - shell:
   - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
