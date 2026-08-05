@@ -105,3 +105,8 @@ DISABLE_LS_COLORS=true
 
 export GPG_TTY=$(tty)
 
+
+# bun
+export BUN_INSTALL="$HOME/Library/Application Support/reflex/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
