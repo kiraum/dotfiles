@@ -3,9 +3,9 @@
 # Start a tmux work session: a localhost window plus one logged SSH window per VM.
 #
 # VMs and the SSH user come from an env file (default: ~/.env), one "ip_hostname" per line:
-#   VMS="192.168.242.20_zerg-swarm-01
-#   192.168.242.21_zerg-swarm-02"
-#   SSH_USERNAME=someuser
+#   VMS="192.0.2.10_host-a
+#   192.0.2.11_host-b"
+#   SSH_USERNAME=user
 
 set -euo pipefail
 
