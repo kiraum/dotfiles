@@ -11,7 +11,8 @@
   "agent_servers": {
     "claude-acp": { "type": "registry" },
     "codex-acp": { "type": "registry" },
-    "cursor": { "type": "registry" }
+    "cursor": { "type": "registry" },
+    "Antigravity": { "type": "custom", "command": "agy", "args": ["acp"] }
   },
   "telemetry": {
     "diagnostics": false,
