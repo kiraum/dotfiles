@@ -25,6 +25,9 @@
     ~/.editrc: base/.editrc
     ~/init_work.sh: base/init_work.sh
     ~/.gnupg/gpg-agent.conf: base/gpg-agent.conf
+    ~/.claude/settings.json: base/settings.json
+    ~/.config/zed/settings.json: base/zed-settings.json
+    ~/.gemini/antigravity-cli/settings.json: base/agy-settings.json
 
 - shell:
   - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
@@ -38,9 +41,13 @@
   - [brew tap hashicorp/tap]
   - [brew update]
   - [brew upgrade -y]
-  - [brew install -y terraform-linters/tap/tflint]
-  - [brew install -y bgpdump bgpkit/tap/monocle bgpq4 git jq mtr pre-commit python@3.14 rust shellcheck shfmt socat tcpdump telnet hashicorp/tap/terraform docker docker-compose colima tmux vim wget okta-aws-cli vault kubectl sipcalc ipcalc rustup rust-analyzer gpg awscli aws/tap/lightsailctl djlint stats bartender go clang-format neovim redis cloc claude-code@latest tree watch websocat yamllint yq gh glab can1357/tap/omp]
-  - [brew install --cask gcloud-cli]
+  - [brew install -y awscli bgpdump bgpkit/tap/monocle bgpq4 can1357/tap/omp clang-format claude-code@latest cloc colima djlint docker docker-compose gh git glab go gpg hashicorp/tap/terraform ipcalc jq kubectl mtr okta-aws-cli pre-commit python@3.15 redis rust rust-analyzer rustfmt rustup shellcheck shfmt sipcalc socat stats tcpdump telnet terraform-linters/tap/tflint tmux tree vault vim watch websocat wget yamllint yq]
+  - [brew install --cask antigravity-cli codex gcloud-cli google-cloud-sdk]
+  # agy installs scapegoat from Claude Code's clone, so make sure Claude has it first.
+  # Only when the clone is missing: "marketplace add" strips autoUpdate from settings.json.
+  - [test -d ~/.claude/plugins/marketplaces/scapegoat || claude plugin marketplace add kiraum/scapegoat]
+  - [claude plugin install scapegoat@scapegoat]
+  - [agy plugin install ~/.claude/plugins/marketplaces/scapegoat]
   - [mkdir -p ~/.docker/cli-plugins]
   - [ln -sfn "$(brew --prefix)/opt/docker-compose/bin/docker-compose" ~/.docker/cli-plugins/docker-compose]
 #  - [colima start]
