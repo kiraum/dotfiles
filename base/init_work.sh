@@ -145,8 +145,27 @@ bastion_login() {
 	fi
 }
 
+# Sign a throwaway message so gpg-agent caches the passphrase before tmux starts.
+unlock_signing_key() {
+	local key tty
+	key=$(git config user.signingkey)
+	[ -n "$key" ] || return 0
+	[ "$(git config --type=bool commit.gpgsign)" = "true" ] || return 0
+
+	# Without a tty pinentry cannot prompt for the passphrase.
+	if ! tty=$(tty); then
+		warn "not running on a terminal; skipping unlock of signing key $key"
+		return
+	fi
+
+	log "unlocking git signing key $key"
+	GPG_TTY=$tty gpg --local-user "$key" --clearsign </dev/null >/dev/null ||
+		warn "could not unlock signing key $key; the first commit will prompt for it"
+}
+
 reset_ssh_agent
 bastion_login
+unlock_signing_key
 
 # ----------------------------------------------------------------------------
 # Logs
