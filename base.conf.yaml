@@ -41,8 +41,8 @@
   - [brew tap hashicorp/tap]
   - [brew update]
   - [brew upgrade -y]
-  - [brew install -y awscli bgpdump bgpkit/tap/monocle bgpq4 can1357/tap/omp clang-format claude-code@latest cloc colima djlint docker docker-compose gh git glab go gpg hashicorp/tap/terraform ipcalc jq kubectl mtr okta-aws-cli pre-commit python@3.15 redis rust rust-analyzer rustfmt rustup shellcheck shfmt sipcalc socat stats tcpdump telnet terraform-linters/tap/tflint tmux tree vault vim watch websocat wget yamllint yq]
-  - [brew install --cask antigravity-cli codex gcloud-cli google-cloud-sdk]
+  - [brew install -y awscli bgpdump bgpkit/tap/monocle bgpq4 can1357/tap/omp clang-format claude-code@latest cloc colima djlint docker docker-compose gh git glab go gpg hashicorp/tap/terraform ipcalc jq kubectl mtr okta-aws-cli pre-commit python@3.15 redis rust rust-analyzer rustup shellcheck shfmt sipcalc socat stats tcpdump telnet terraform-linters/tap/tflint tmux tree vault vim watch websocat wget yamllint yq]
+  - [brew install --cask antigravity-cli codex gcloud-cli]
   # agy installs scapegoat from Claude Code's clone, so make sure Claude has it first.
   # Only when the clone is missing: "marketplace add" strips autoUpdate from settings.json.
   - [test -d ~/.claude/plugins/marketplaces/scapegoat || claude plugin marketplace add kiraum/scapegoat]
