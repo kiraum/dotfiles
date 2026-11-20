@@ -105,6 +105,11 @@ DISABLE_LS_COLORS=true
 
 export GPG_TTY=$(tty)
 
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zprofile
+export PATH="$HOME/.local/bin:$PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terrafor
 
 # bun
 export BUN_INSTALL="$HOME/Library/Application Support/reflex/bun"
