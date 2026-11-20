@@ -18,7 +18,8 @@
       "source": {
         "source": "github",
         "repo": "kiraum/scapegoat"
-      }
+      },
+      "autoUpdate": true
     }
   },
   "effortLevel": "xhigh",
